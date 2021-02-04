@@ -1,96 +1,105 @@
-### 📕 Algorithm
-- [[Algorithm] study](https://seulhee030.tistory.com/category/python/python%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C)<details><summary>programmers Level 1</summary>
-   
-   - 두개 뽑아서 더하기
-   
-   - 모든 레코드 조회하기
-   
-   - 최댓값 구하기
-   
-   - 완주하지 못한 선수
-   
-   - 모의고사
-   
-   - K번째수
-   
-   - 2016년
-   
-   - 가운데 글자 가져오기
-   
-   - 역순 정렬하기
-   
-   - 문자열 내 망므대로 정렬하기
-   
-   - 서울에서 김서방 찾기
-   
-   - 동물의 아이디와 이름
-   
-   - 제일 작은 수 제거하기
-   
-   - 정수 제곱근 판별
-   
-   - 자릿수 더하기
-   
-   - 어린 동물 찾기
-   
-   - 약수의 합
-   
-   - 문자열을 정수로 바꾸기
-   
-   - 소수 찾기
-   
-   - 아픈동물 찾기
-   
-   - 하샤드 수
-   
-   - 여러 기준으로 정렬하기
-   
-   - 이름이 없는 동물의 아이디
-   
-   - 행렬의 덧셈
-   
-   - 이름이 있는 동물의 아이디
-  
-   - 상위 n개 레코드
-   
-   - 같은 숫자는 싫어
-   
-   - 체육복
-   
-   - 나누어 떨어지는 배열
-   
-   - 문자열 내 p와 y의 개수
-   
-   - 이상한 문자만들기
-   
-   - 짝수와 홀수
+# markdown 문법
 
-   
-  </details>
+## 제목(heading)
 
-- [inflearn] 성공적인 코딩 인터뷰
+#의 개수를 바탕으로 제목의 레벨을 지정한다. 
+
+### 제목3
+
+#### 제목4
+
+##### 제목5
+
+###### 제목6
 
 
-### 📙 Python
-- [book] 파이썬 라이브러리를 활용한 머신러닝 [참고자료](https://github.com/pakseulhee/introduction_to_ml_with_python)
+
+## 목록 ** 목록 
+
+* 순서가 없는 
+* 목록 
+  * 엔터 누른 후 tab을 눌러서 하위 레벨로 
+  * 목록을 작성할 수 있습니다. 
+* 그리고 shift+tab을 통해 상위 레벨로 갈 수 있습니다. 
+
+1. 순서가 있는 
+2. 목록 
+   1. 엔터 누르고 tab 하면 하위 레벨 
+3. shift+tab로 상위 레벨 
 
 
-### 📒 Java
-- [inflearn] 자바 프로그래밍 입문 강좌 (renew ver.) <details><summary>Certificate</summary>
-   <img width="569" alt="캡처" src="https://user-images.githubusercontent.com/55427048/104747960-80a4ea80-5794-11eb-845f-1a3c44aec882.PNG">
-  </details>
+
+## 코드블럭 
+
+```java
+System.out.println("hi");
+// 주석입니다. 
+    
+```
 
 
-### 📗 MySQL
-- 
 
 
-### 📘 project
-- 
+
+``` 파이썬
+pritn("hi")
+#comment 
+// 주석 
+```
 
 
-### ✔️ ETC
-- [education] AI 온오프 연계 교육
-- [education] 헬로! 핀테크 교육 <details><summary>Certificate</summary>
-    <img width="279" alt="1" src="https://user-images.githubusercontent.com/55427048/104749424-273dbb00-5796-11eb-8961-8bb427cc4d5a.PNG">
-  </details>
+
+백킷(```) 3개 특정 언어 (java)  
+
+``` html 
+<hi></hi>
+<!-- comment -->
+```
+
+(``)
+
+``` bash
+$ git init
+
+```
+
+`inline codeblock`
+
+##  인용문 
+
+">" 를 통해서 인용문을 표현한다. 
+
+> 인용문 
+
+## 표
+
+| 순번 | 이름   | 비고 |
+| :--- | ------ | ---- |
+| 1    | 홍길동 |      |
+| 2    | 정규남 |      |
+| 3    | 백승빈 |      |
+
+## 이미지 
+
+  ![NASA NORTH KOREA AT NIGHT](md-images/NASA%20NORTH%20KOREA%20AT%20NIGHT.jpg)
+
+* typora에 위의 설정을 하면, 상대경로로 이미지가 관리된다. 
+
+## 링크 
+
+[구글](https://google.com) 에서 검색을 하자!
+
+[네이버](https://naver.com)에서 검색을 하자!
+
+## 기타 
+
+*기울임*
+
+**굵게 **
+
+~~취소선~~
+
+-----
+
+
+
