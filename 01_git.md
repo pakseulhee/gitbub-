@@ -1,96 +1,108 @@
-### 📕 Algorithm
-- [[Algorithm] study](https://seulhee030.tistory.com/category/python/python%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C)<details><summary>programmers Level 1</summary>
-   
-   - 두개 뽑아서 더하기
-   
-   - 모든 레코드 조회하기
-   
-   - 최댓값 구하기
-   
-   - 완주하지 못한 선수
-   
-   - 모의고사
-   
-   - K번째수
-   
-   - 2016년
-   
-   - 가운데 글자 가져오기
-   
-   - 역순 정렬하기
-   
-   - 문자열 내 망므대로 정렬하기
-   
-   - 서울에서 김서방 찾기
-   
-   - 동물의 아이디와 이름
-   
-   - 제일 작은 수 제거하기
-   
-   - 정수 제곱근 판별
-   
-   - 자릿수 더하기
-   
-   - 어린 동물 찾기
-   
-   - 약수의 합
-   
-   - 문자열을 정수로 바꾸기
-   
-   - 소수 찾기
-   
-   - 아픈동물 찾기
-   
-   - 하샤드 수
-   
-   - 여러 기준으로 정렬하기
-   
-   - 이름이 없는 동물의 아이디
-   
-   - 행렬의 덧셈
-   
-   - 이름이 있는 동물의 아이디
+# git 기초
+
+> 분산버전관리시스템(DVCS)
+
+## git 저장소(repository) 초기화
+
+```bash
+$ git init
+Initialized empty Git repository in C:/Users/student/Desktop/md/.git/
+(master) $
+```
+
+* `.git` 숨김 폴더가 생성되고, bash 환경에서는 `(master)` 로 브랜치 정보가 나타난다.
+
+## 작업 흐름
+
+### 1. `add`
+
+```bash
+$ git add .              # . 현재디렉토리!
+$ git add a.txt b.txt    # 특정 파일
+$ git add myfolder/      # 특정 폴더
+```
+
+현재 작업 중인 파일의 변경사항을 `staging area` 로 변경한다.
+
+* staging area : 커밋(버전)으로 기록할 대상의 파일들의 목록
+
+add 전 상황
+
+```bash
+$ touch 123.txt
+$ git status
+On branch master
+
+No commits yet
+# untracked files - 트래킹이 되고 있지 않는 파일
+# 첫번째 통
+Untracked files:
+  # git add를 사용
+  # 커밋이 될 것에 포함시키기 위해서..
+  # 두번째 통으로 이동시키려면
+  (use "git add <file>..." to include in what will be committed)
+        123.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+```
+
+* add 후 상황
+
+  ```bash
+  $ git add .
+  $ git status
+  On branch master
   
-   - 상위 n개 레코드
-   
-   - 같은 숫자는 싫어
-   
-   - 체육복
-   
-   - 나누어 떨어지는 배열
-   
-   - 문자열 내 p와 y의 개수
-   
-   - 이상한 문자만들기
-   
-   - 짝수와 홀수
+  No commits yet
+  # 커밋이 될 변경사항들
+  Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+          new file:   123.txt
+  
+  ```
 
-   
-  </details>
+### 2. commit
 
-- [inflearn] 성공적인 코딩 인터뷰
+> 변경사항들을 버전으로 기록
 
+```bash
+$ git commit -m 'First commit'
+[master (root-commit) d38cbcd] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 123.txt
+```
 
-### 📙 Python
-- [book] 파이썬 라이브러리를 활용한 머신러닝 [참고자료](https://github.com/pakseulhee/introduction_to_ml_with_python)
+* 특정시점을 스냅샷처럼 기록한다.
+* commit시 메시지는 반드시 잘 작성해야한다.
+  * 지금 기록한 코드의 이력을 나타낼 수 있도록
 
+## 기타 명령어
 
-### 📒 Java
-- [inflearn] 자바 프로그래밍 입문 강좌 (renew ver.) <details><summary>Certificate</summary>
-   <img width="569" alt="캡처" src="https://user-images.githubusercontent.com/55427048/104747960-80a4ea80-5794-11eb-845f-1a3c44aec882.PNG">
-  </details>
+### `log`
 
+>  지금까지 기록된 커밋들을 확인할 수 있음
 
-### 📗 MySQL
-- 
+```bash
+$ git log
+commit d38cbcdb19140f2ca0d83ba9f59f6cb6cfd02c24 (HEAD -> master)
+Author: edutak <edutak.ssafy@gmail.com>
+Date:   Thu Feb 4 14:12:49 2021 +0900
 
+    First commit
+$ git log --oneline # 한줄로
+d38cbcd (HEAD -> master) First commit
+$ git log -2     # 최근 2개
+$ git log --oneline -1 # 최근 1개를 한줄로
+```
 
-### 📘 project
-- 
+### `status`
 
+> git 저장소의 파일 변경 사항등을 확인할 수 있음
 
-### ✔️ ETC
-- [education] AI 온오프 연계 교육
-- [education] 헬로! 핀테크 교육 <details><summary>Certificate</summary>
-    <img width="279" alt="1" src="https://user-images.githubusercontent.com/55427048/104749424-273dbb00-5796-11eb-8961-8bb427cc4d5a.PNG">
-  </details>
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
