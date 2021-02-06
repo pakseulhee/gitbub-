@@ -1,1 +1,2 @@
-# github특강에서 배운 내용들 입니다.
+## 2021.02.04
+### K-Digital github특강에서 배운 repository
